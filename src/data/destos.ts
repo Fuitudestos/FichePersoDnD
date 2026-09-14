@@ -26,6 +26,8 @@ export interface Character {
   ideal: string;
   weakness: string;
   abilities: string[];
+  skills: { name: string; ability: StatKey; modifier: number; proficient: boolean }[];
+  equipment: string[];
 }
 
 export const destos: Character = {
@@ -82,5 +84,34 @@ export const destos: Character = {
     "Thaumaturge : +1 sort mineurs supplémentaires.",
     "Vous pouvez ajouter votre modificateur de Sagesse à vos jets de compétences basés sur l'Intelligence, spécifiquement en Arcanes et en Religion.",
 
+  ],
+
+  skills: [
+    { name: "Acrobaties", ability: "Dextérité", modifier: -2, proficient: false },
+    { name: "Dressage", ability: "Sagesse", modifier: 3, proficient: false },
+    { name: "Arcanes", ability: "Intelligence", modifier: 4, proficient: false },
+    { name: "Athlétisme", ability: "Force", modifier: 0, proficient: false },
+    { name: "Tromperie", ability: "Charisme", modifier: 0, proficient: false },
+    { name: "Histoire", ability: "Intelligence", modifier: 3, proficient: true },
+    { name: "Perspicacité", ability: "Sagesse", modifier: 5, proficient: true },
+    { name: "Intimidation", ability: "Charisme", modifier: 0, proficient: false },
+    { name: "Investigation", ability: "Intelligence", modifier: 1, proficient: false },
+    { name: "Médecine", ability: "Sagesse", modifier: 5, proficient: true },
+    { name: "Nature", ability: "Intelligence", modifier: 1, proficient: false },
+    { name: "Perception", ability: "Sagesse", modifier: 3, proficient: false },
+    { name: "Représentation", ability: "Charisme", modifier: 0, proficient: false },
+    { name: "Persuasion", ability: "Charisme", modifier: 0, proficient: false },
+    { name: "Religion", ability: "Intelligence", modifier: 6, proficient: true },
+    { name: "Escamotage", ability: "Dextérité", modifier: -2, proficient: false },
+    { name: "Discrétion", ability: "Dextérité", modifier: -2, proficient: false },
+    { name: "Survie", ability: "Sagesse", modifier: 3, proficient: false },
+  ],
+
+  equipment: [
+    "Cotte de mailles",
+    "Bouclier",
+    "Marteau de guerre à une main",
+    "Symbole sacré en forme de soleil",
+    "Sacoche contenant : 1 trousse de soin, 1 potion de vie, 1 antidote",
   ]
 };

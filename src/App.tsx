@@ -5,6 +5,7 @@ import { CharacterHeader } from "./components/CharacterHeader";
 import { Section } from "./components/Section";
 import { Stats } from "./components/Stats";
 import { Spells } from "./components/Spells";
+import { Skills } from "./components/Skills";
 
 import characterArt from "./assets/Destos_Delaunay.png";
 import portraitArt from "./assets/destos-portrait.png";
@@ -18,10 +19,10 @@ function App() {
   return (
     <main className="page">
       <article id="character-sheet" className="character-sheet">
-        <CharacterHeader character={c} />
-
         <div className="sheet-grid">
           <aside className="left-column">
+            <CharacterHeader character={c} />
+
             <Section title="Informations de Base" icon="☀">
               <dl className="info-list">
                 <div><dt>Race</dt><dd>{c.race}</dd></div>
@@ -58,13 +59,14 @@ function App() {
                 ))}
               </div>
             </Section>
+
           </aside>
 
           <section className="right-column">
-            <div className="art-frame hero-art">
-              <img src={characterArt} alt="Destos Delaunay - concept art" />
+            <div className="quote">
+              <span>☀</span>
+              <p>« Tout le monde doit connaitre le toucher de la Lumière. »</p>
             </div>
-
             <div className="detail-grid">
               <div className="art-frame">
                 <img
@@ -99,10 +101,15 @@ function App() {
               </div>
             </div>
 
-            <div className="quote">
-              <span>☀</span>
-              <p>« Tout le monde doit connaitre le toucher de la Lumière. »</p>
-            </div>
+            <Skills character={c} />
+
+            <Section title="Équipement" icon="⚔">
+              <ul className="equipment-list">
+                {c.equipment.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </Section>
           </section>
         </div>
       </article>
