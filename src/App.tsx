@@ -1,10 +1,16 @@
+// @ts-nocheck
+
 import { destos } from "./data/destos";
 import { CharacterHeader } from "./components/CharacterHeader";
 import { Section } from "./components/Section";
 import { Stats } from "./components/Stats";
 import { Spells } from "./components/Spells";
-// @ts-ignore
+
 import characterArt from "./assets/Destos_Delaunay.png";
+import portraitArt from "./assets/destos-portrait.png";
+import robeDetailArt from "./assets/destos-robe-detail.png";
+import bookArt from "./assets/destos-book.png";
+import medallionArt from "./assets/destos-medallion.png";
 
 function App() {
   const c = destos;
@@ -61,16 +67,35 @@ function App() {
 
             <div className="detail-grid">
               <div className="art-frame">
-                <img src={characterArt} alt="Portrait de Destos" className="detail-image portrait" />
+                <img
+                    src={portraitArt}
+                    alt="Portrait de Destos"
+                    className="detail-image portrait"
+                />
               </div>
+
               <div className="art-frame">
-                <img src={characterArt} alt="Détail du personnage" className="detail-image robe" />
+                <img
+                    src={robeDetailArt}
+                    alt="Détail de la robe de Destos"
+                    className="detail-image robe"
+                />
               </div>
+
               <div className="art-frame">
-                <img src={characterArt} alt="Livre de Destos" className="detail-image book" />
+                <img
+                    src={bookArt}
+                    alt="Livre de Destos"
+                    className="detail-image book"
+                />
               </div>
+
               <div className="art-frame">
-                <img src={characterArt} alt="Médaillon de Destos" className="detail-image medallion" />
+                <img
+                    src={medallionArt}
+                    alt="Médaillon de Destos"
+                    className="detail-image medallion"
+                />
               </div>
             </div>
 

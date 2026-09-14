@@ -222,28 +222,6 @@ body {
   height: 260px;
 }
 
-.detail-image {
-  transform: scale(1.6);
-}
-
-.detail-image.portrait {
-  object-position: 32% 48%;
-}
-
-.detail-image.robe {
-  object-position: 77% 46%;
-}
-
-.detail-image.book {
-  object-position: 35% 86%;
-  transform: scale(1.85);
-}
-
-.detail-image.medallion {
-  object-position: 51% 88%;
-  transform: scale(1.85);
-}
-
 .quote {
   text-align: center;
   border-top: 1px solid #a37b4b;
