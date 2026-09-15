@@ -110,6 +110,18 @@ function App() {
                 ))}
               </ul>
             </Section>
+
+            <Section title="Conduit Divin" icon="☀">
+              <div className="paragraph-list">
+                <p><b>Utilisations :</b> {c.divineChannel.uses}</p>
+                <p><b>Récupération :</b> {c.divineChannel.recovery}</p>
+              </div>
+              <ul className="equipment-list">
+                {c.divineChannel.options.map((option, index) => (
+                  <li key={index}>{option}</li>
+                ))}
+              </ul>
+            </Section>
           </section>
         </div>
       </article>

@@ -28,19 +28,24 @@ export interface Character {
   abilities: string[];
   skills: { name: string; ability: StatKey; modifier: number; proficient: boolean }[];
   equipment: string[];
+  divineChannel: {
+    uses: string;
+    recovery: string;
+    options: string[];
+  };
 }
 
 export const destos: Character = {
   name: "Destos Delaunay",
   className: "Clerc",
-  level: 1,
+  level: 2,
   race: "Humain",
   alignment: "Neutral Bon",
   background: "Prêtre",
   deity: "La Lumière",
 
   armorClass: "15",
-  hitPoints: "10 (1d8 + 2 Constitution)",
+  hitPoints: "17",
   speed: "9m",
 
   stats: {
@@ -66,6 +71,7 @@ export const destos: Character = {
       "Création ou destruction d'eau",
       "Détection de la magie",
       "Purification de la nourriture et de l'eau",
+      "Rayon traçant",
       "Mot de guérison",
     ],
   },
@@ -77,8 +83,7 @@ export const destos: Character = {
 
   abilities: [
       "Prêtre : +1 à l'Intelligence, la Sagesse, et au Charisme.",
-    "Compétences améliorées : Perspicacité et Religion (+2).",
-    "Initié à la Magie : +2 sorts mineurs supplémentaires et 1 sort de niveau 1 supplémentaire utilisable 1/jour.",
+    "Initié à la Magie : +2 sorts mineurs supplémentaires et +1 sort de niveau 1 supplémentaire utilisable 1/jour.",
     "Sorts d'initié : Lumière, Thaumaturgie, Mot de guérison.",
     "Don d'humain : Guérisseur.",
     "Thaumaturge : +1 sort mineurs supplémentaires.",
@@ -113,5 +118,14 @@ export const destos: Character = {
     "Marteau de guerre à une main",
     "Symbole sacré en forme de soleil",
     "Sacoche contenant : 1 trousse de soin, 1 potion de vie, 1 antidote",
-  ]
+  ],
+
+  divineChannel: {
+    uses: "2 utilisations",
+    recovery: "+1 utilisation récupérée par repos court, toutes récupérées après un repos long",
+    options: [
+      "Étincelle divine",
+      "Renvoi des morts-vivants",
+    ],
+  }
 };
